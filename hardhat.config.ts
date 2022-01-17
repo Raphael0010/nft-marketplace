@@ -1,5 +1,6 @@
-require("@nomiclabs/hardhat-waffle");
-const fs = require("fs");
+import "@nomiclabs/hardhat-ethers";
+import fs from "fs";
+
 const privateKey = fs.readFileSync(".secret").toString();
 const appId = fs.readFileSync(".appId").toString();
 
