@@ -119,9 +119,9 @@ contract NFTMarket is ReentrancyGuard {
         uint tokenId = idToMarketItem[itemId].tokenId;
 
         // On vérifie que le prix envoyer par la personne appelant le smart contrat est égale au prix du NFT
-        require(msg.value == price, "Please sumbit the asking price in order to complete the purchase");
+        require(msg.value == price, "Please submit the asking price in order to complete the purchase");
         // On vérifie que le NFT est bien en vente
-        require(idToMarketItem[itemId].inSell == true, "This NFT is not in the market");
+        require(idToMarketItem[itemId].inSell == true, "This NFT is not for sale");
         // On vérifie que la personne n'achète pas son propre NFT !
         require(idToMarketItem[itemId].owner != msg.sender, "You can't buy your own NFT");
 

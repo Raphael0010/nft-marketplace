@@ -22,10 +22,13 @@ struct MarketItem {
 ## Actual Coverage :
 
 ```
-√ Should create and list an NFT (184ms)
-√ Should create an NFT and remove it from sales (152ms)
-√ Should create an NFT and remove it from sales and re add it to sales (190ms)
-√ Should buy a nft (191ms)
+√ Should create and list an NFT (140ms)
+√ Should create an NFT and remove it from sales (101ms)
+√ Should create an NFT and remove it from sales and re add it to sales (185ms)
+√ Should buy a nft (150ms)
+√ Should not buy is own nft (134ms)
+√ Should not buy a nft who is not in sell
+√ Should send the right price to buy the nft (39ms)
 ```
 
 ## Setup :
