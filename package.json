@@ -27,6 +27,7 @@
     "web3modal": "^1.9.5"
   },
   "devDependencies": {
+    "@typechain/hardhat": "^4.0.0",
     "@types/chai": "^4.3.0",
     "@types/chai-as-promised": "^7.1.4",
     "@types/mocha": "^9.0.0",
@@ -34,9 +35,10 @@
     "autoprefixer": "^10.4.2",
     "chai-as-promised": "^7.1.1",
     "dotenv-flow": "^3.2.0",
-    "eslint": "8.6.0",
+    "eslint": "^8.7.0",
     "eslint-config-next": "12.0.8",
     "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
     "tailwindcss": "^3.0.13",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"

@@ -9,18 +9,23 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract NFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
-    address contractAddress;
 
-    constructor(address marketPlaceAddress) ERC721("Digimat Tokens","DMT"){
-        contractAddress = marketPlaceAddress;
+    constructor() ERC721("DigiMatNFT","DMT"){
     }
 
-    function createToken(string memory tokenURI) public returns (uint){
+    //uri de l'image avec les metadata du nft build via infura
+    function mint(string memory tokenURI) public returns (uint){
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
         _mint(msg.sender, newItemId);
         _setTokenURI(newItemId, tokenURI);
-        setApprovalForAll(contractAddress, true);
+        setApprovalForAll(address(this), true);
         return newItemId;
     }
+
+    function getContractAddress() public view returns (address) {
+        return address(this);
+    }
 }
+
+// https://medium.com/blockchain-manchester/erc-721-metadata-standards-and-ipfs-94b01fea2a89

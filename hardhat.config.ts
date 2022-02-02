@@ -1,10 +1,11 @@
+import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import fs from "fs";
 
 const privateKey = fs.readFileSync(".secret").toString();
 const appId = fs.readFileSync(".appId").toString();
 
-module.exports = {
+const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       chainId: 1337
@@ -20,3 +21,5 @@ module.exports = {
   },
   solidity: "0.8.4",
 };
+
+export default config;
