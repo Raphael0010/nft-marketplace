@@ -14,13 +14,13 @@ contract NFT is ERC721URIStorage {
     }
 
     //uri de l'image avec les metadata du nft build via infura
-    function mint(string memory tokenURI) public returns (uint){
+    function mint(string memory metadataUri) public returns (uint){
         _tokenIds.increment();
-        uint256 newItemId = _tokenIds.current();
-        _mint(msg.sender, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        uint256 id = _tokenIds.current();
+        _mint(msg.sender, id);
+        _setTokenURI(id, metadataUri);
         setApprovalForAll(address(this), true);
-        return newItemId;
+        return id;
     }
 
     function getContractAddress() public view returns (address) {

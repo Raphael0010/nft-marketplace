@@ -1,0 +1,11 @@
+{
+    "title": "Pijo 208",
+    "type": "Image/Music/Video",
+    "properties": {
+        "other": {
+            "artist": "Pijo",
+            "artworkName": "La Pijo",
+            "description": "Identifies the asset to which this NFT represents"
+        }
+    }
+}
